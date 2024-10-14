@@ -1,0 +1,173 @@
+% Compte-rendu minimal du mini-projet SDA : LCA et TH
+% Auteur : LAURENT Maxime
+% Groupe de TP : I
+
+
+**Consigne :** Vous devez écrire vos réponse à la place des ... en laissant
+une ligne vide avant et deux après votre réponse.
+
+**Remarque :** Ce document utilise le langage Markdown. On peut en engendrer
+une version PDF en faisant par exemple :
+
+~~~
+pandoc --toc -N -o LISEZ-MOI.pdf LISEZ-MOI.txt
+~~~
+
+
+# Exercice 1
+
+## Question 1.4
+
+**Indiquer les inconvénients/avantages d'une implantation par listes chaînées
+d'une SDA.**
+
+Avantages:
+
+    - permet de modifier la taille et de rajouter des éléments simplement
+
+    - étant donné que l'on utilise des pointeurs l'implémentation de la SDA par listes chaînées ne nécessite pas
+    d'utiliser un bloc de mémoire contiguë.
+
+Inconvénients:
+    - pour un même nombre d'élément la liste chaînée est plus lourde en terme de mémoire 
+    que le tableau car celle-ci nécessite d'aussi de stocker les pointeurs.
+
+    - lorsque l'on veut accéder un élément dans une liste chaînée cela est d'autant plus long que l'indice de l'élément est "grand" 
+    car on doit succesivement passer par tous les éléments précedents. 
+    Alors que dans un tableau on accède aux éléments en temps constant.
+
+
+
+
+# Évaluation expérimentale.
+
+## Performance comparée de LCA et TH
+
+Indiquer ici les résultats obtenus.
+
+
+Performance evaluer_alea_lca:
+
+    Borne = 10
+        Taille = 10 :  0m0,003s
+        Taille = 100 : 0m0,005s
+        Taille = 1 000 : 0m0,006s
+        Taille = 10 000: 0m0,005s
+        Taille = 100 000 : 0m0,037s
+        Taille = 1 000 000 : 0m0,091s
+        Taille = 10 000 000: 0m0,839s
+
+    Borne = 100
+        Taille = 10 :  0m0,002s
+        Taille = 100 : 0m0,006s
+        Taille = 1 000 : 0m0,005s
+        Taille = 10 000: 0m0,017s
+        Taille = 100 000 : 0m0,141s
+        Taille = 1 000 000 : 0m1,254s
+        Taille = 10 000 000: 0m12,310s
+
+    Borne = 1 000
+        Taille = 10 :  0m0,006s
+        Taille = 100 : 0m0,006s
+        Taille = 1 000 : 0m0,019s
+        Taille = 10 000: 0m0,168s
+        Taille = 100 000 : 0m1,384s
+        Taille = 1 000 000 : 0m1,254s
+        Taille = 10 000 000: 0m13,580s    
+
+    Borne = 10 000
+        Taille = 10 :  0m0,008s
+        Taille = 100 : 0m0,022s
+        Taille = 1 000 : 0m0,108s
+        Taille = 10 000: 0m1,420s
+        Taille = 100 000 : 0m14,511s
+        Taille = 1 000 000 : 2m22,264s
+        Taille = 10 000 000: trop long 
+
+    Borne = 100 000
+        Taille = 10 :  0m0,014s
+        Taille = 100 : 0m0,101s
+        Taille = 1 000 : 0m0,948s
+        Taille = 10 000: 0m10,136s
+        Taille = 100 000 : 2m38,785s
+        Taille = 1 000 000 : trop long
+        Taille = 10 000 000: trop long 
+
+Performance evaluer_alea_th :
+
+    Borne = 10
+        Taille = 10 :  0m0,003s
+        Taille = 100 : 0m0,006s
+        Taille = 1 000 : 0m0,007s
+        Taille = 10 000: 0m0,007s
+        Taille = 100 000 : 0m0,017s
+        Taille = 1 000 000 : 0m0,048s
+        Taille = 10 000 000: 0m0,366s
+
+    Borne = 100
+        Taille = 10 :  0m0,003s
+        Taille = 100 : 0m0,005s
+        Taille = 1 000 : 0m0,006s
+        Taille = 10 000: 0m0,006s
+        Taille = 100 000 : 0m0,008s
+        Taille = 1 000 000 : 0m0,047s
+        Taille = 10 000 000: 0m0,363s
+
+    Borne = 1 000
+        Taille = 10 :  0m0,001s
+        Taille = 100 : 0m0,000s
+        Taille = 1 000 : 0m0,003s
+        Taille = 10 000: 0m0,003s
+        Taille = 100 000 : 0m0,008s
+        Taille = 1 000 000 : 0m0,056s
+        Taille = 10 000 000: 0m0,378s
+
+    Borne = 10 000
+        J'obtiens : raised CONSTRAINT_ERROR : th.adb:79 index check failed
+        Je n'ai réussi à corriger.
+        Cela me paraît lié au fait d'utiliser l'identité comme fonction de hachage sachent que la taille du tableau est 1000.
+
+    
+    Hormis ce bug on remarque que th est bien plus efficace que lca sur des grandes valeurs 
+    de Taille et Borne. 
+
+
+
+## Qualité du générateur aléatoire
+
+Indiquer les conclusions quant à la qualité du générateur aléatoire.
+
+On sait qu'un générateur alétoire est de bonne qualité si la différence entre la fréquence max et la fréquence min est faible.
+
+
+
+
+# Principales difficultés rencontrées
+
+Indiquer ici les principales difficultés rencontrées lors de la réalisation de
+ce projet et comment elles ont été surmontées ou contournéeS.
+
+Le plus dur à été la gestion des modules et de savoit exactement ce qu'il fallait importer et définir dans chaque fichier(ads, adb).
+Pour les surmontées je suis aller voir des les anciens tp comment on avait fait, et sinon grâce à l'aide de mes camarades.
+
+
+
+# Informations complémentaires
+
+Indiquer ici les informations qui pourraient aider à la compréhension du
+travail réalisé.
+
+Cette partie peut être vide.
+
+...
+
+
+
+# Bilan personnel
+
+Quel bilan personnel tirez-vous de ce mini-projet ?
+
+Intéressant dans le fait de comparer les types de structures de données et leurs performances.
+De plus, cela m'a appris à construire un projet autour de plusieurs fichiers et d'apprendre comment les lier entre eux.
+C'était compliqué de ce lancer au début mais une fois que les premmières lignes étaient écrites cela avançait beaucoup plus vite.
+
