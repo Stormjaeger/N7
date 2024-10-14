@@ -1,0 +1,10 @@
+project Pr03 is
+
+   package Compiler is
+      for Switches ("Ada") use ("-g", "-O2");
+   end Compiler;
+
+   for Main use ("pagerank_mat_pleines.adb") & project'Main;
+
+end Pr03;
+
