@@ -1,0 +1,39 @@
+Nom       : LAURENT
+Prénom    : Maxime
+Groupe TP : I
+
+
+Consigne :  Ci-dessous, répondre à la place des « ... ».
+
+
+=====[ Temps ]==================================================================
+
+Temps passé sur la V1 : 5 heures 30 minutes
+Temps passé sur la V2 : ... heures ... minutes
+Pour la V2 on ne tiendra pas compte du temps passé sur la V1.
+Bien sûr, les temps renseignés ici ne sont pas pris en compte dans la notation.
+
+
+=====[ Questions ]==============================================================
+
+Indiquer la relation UML entre Cercle et le Point centre du cercle.
+-------------------------------------------------------------------
+
+C'est une composition.
+
+
+Comment est réalisée l'exigence E18 ?
+-------------------------------------
+
+Dans la méthode getCentre() on créé une copie du centre pour que celui-ci ne puisse pas être modifié.
+On fait de même dans les constructeurs qui prennent le cercle du centre en argument pour la même raison.
+
+
+
+=====[ Explications ]===========================================================
+
+(Facultatif) Donner ici les explications supplémentaires utiles à la
+compréhension du travail rendu.
+
+Lors de la compilation du fichier FormeCercleTest.java on obtient un warning lié à l'importation de Color qui n'est ensuite pas utilisée
+cependant je ne peut pas rectifier ce warning car il m'est interdit de modifier ce fichier.

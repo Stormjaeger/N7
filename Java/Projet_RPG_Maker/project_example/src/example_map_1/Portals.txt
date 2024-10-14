@@ -1,0 +1,1 @@
+5 9 /example_map_2/map_2.map
