@@ -1,0 +1,62 @@
+V "GNAT Lib v10"
+M P W=b
+A -gnatwa
+P ZX
+
+RN
+RV NO_IO
+RV SPARK_05
+
+U jeu_devin_exo3%b	jeu_devin_exo3.adb	fa4a9491 NE OO SU
+W jeu_devin_exo1%b	jeu_devin_exo1.adb	jeu_devin_exo1.ali
+W jeu_devin_exo2%b	jeu_devin_exo2.adb	jeu_devin_exo2.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D alea.ads		20230919071652 9fe1c6b1 alea%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D jeu_devin_exo1.adb	20231005163512 2d928419 jeu_devin_exo1%b
+D jeu_devin_exo2.adb	20231005162538 b52837c5 jeu_devin_exo2%b
+D jeu_devin_exo3.adb	20231005155425 4342efd5 jeu_devin_exo3%b
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+D text_io.ads		20230707070819 21b2c898 text_io%s
+G a e
+G c Z b b [jeu_devin_exo3 standard 8 11 none]
+G r c none [jeu_devin_exo3 standard 8 11 none] [jeu_devin_exo2 standard 8 11 none]
+G r c none [jeu_devin_exo3 standard 8 11 none] [jeu_devin_exo1 standard 8 11 none]
+X 7 a-textio.ads
+264U14*New_Line 15|18s9 20s9 22s9 24s9
+381U14*Get 15|26s9
+465U14*Put 15|17s9 19s9 21s9 23s9 41s13
+X 13 jeu_devin_exo1.adb
+8U11*Jeu_Devin_Exo1 15|2w6 30s13
+X 14 jeu_devin_exo2.adb
+8U11*Jeu_Devin_Exo2 15|3w6 34s13
+X 15 jeu_devin_exo3.adb
+8U11*Jeu_Devin_Exo3 8b11 50l5 50t19
+10e5 version{character} 26m13 29r12 33r15 37r15
+11b5 quitter{boolean} 31m13 35m13 38m12 45r15
+X 29 text_io.ads
+24K9*Text_IO=24:29 15|1w6 1r32
+
